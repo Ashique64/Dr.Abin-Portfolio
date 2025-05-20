@@ -1,0 +1,894 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Virtuo is a modern personal portfolio template for designers, developers, content writer, cleaner, programmer, fashion designer, model, Influencer and freelancers. Fully responsive, SEO-friendly, Bootstrap and easy to customize.">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.svg' %}">
+        <title>Dr.Abin.C.Raj</title>
+    <!-- Bootstrap min css -->
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/fontawesome.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/plugins/odometer.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
+    <!-- custom css -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+        <style>
+
+            .tagline {
+                font-size:30px;
+                font-weight: bold;
+                font-family: var(--font-primary);
+                color: rgb(8, 29, 65);
+
+            }
+
+            .counter-card .counter-title {
+                color:var(--color-primary);
+            }
+
+            .banner-one-main-wrapper .banner-right-content img {
+                height: 700px
+            }
+
+            .portfolio-card-content-wrap {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .portfoli-card-para {
+                margin-bottom: 10px;
+            }
+
+            .card-btn {
+                width: 160px;
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .latest-portfolio-card {
+                height: 100%;
+            }
+            .portfoli-card-img {
+                min-height: 380px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+
+
+
+
+            @media (max-width:370px) {
+                .banner-one-main-wrapper .banner-right-content .banner-big-text-1 {
+                    font-size: 36px;
+                }
+                .banner-one-main-wrapper .banner-right-content .banner-big-text-2 {
+                    font-size: 36px;
+                }
+
+                .tagline {
+                    font-size: 20px;
+                    margin: 10px 0px;
+                }
+
+                .counter-card .counter-title {
+                    font-size: 38px;
+                }
+
+                .single-footer-wrapper .description {
+                    font-size: 34px;
+                }
+
+                .single-footer-wrapper .para {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+
+                .banner-one-main-wrapper .banner-right-content img {
+                    height: 380px
+                }
+            }
+
+            @media (min-width:371px) and (max-width:567px) {
+                .banner-one-main-wrapper .banner-right-content .banner-big-text-1 {
+                    font-size: 40px;
+                }
+                .banner-one-main-wrapper .banner-right-content .banner-big-text-2 {
+                    font-size: 40px;
+                }
+
+                .tagline {
+                    font-size: 20px;
+                    margin: 10px 0px;
+                }
+
+                .counter-card .counter-title {
+                    font-size: 38px;
+                }
+
+                .single-footer-wrapper .description {
+                    font-size: 34px;
+                }
+                .single-footer-wrapper .para {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .banner-one-main-wrapper .banner-right-content img {
+                    height: 380px
+                }
+            }
+
+            @media (min-width:568px) and (max-width:767px) {
+                .banner-one-main-wrapper .banner-right-content .banner-big-text-1 {
+                    font-size: 40px;
+                }
+                .banner-one-main-wrapper .banner-right-content .banner-big-text-2 {
+                    font-size: 40px;
+                }
+
+                .single-footer-wrapper .description {
+                    font-size: 38px;
+                }
+
+                .single-footer-wrapper .para {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                .banner-one-main-wrapper .banner-right-content img {
+                    height: 480px
+                }
+            }
+        </style>
+
+
+    </head>
+
+    <body class="tmp-white-version">
+    <!-- tpm-header-area start -->
+        <header class="tmp-header-area-start header-one header--sticky header--transparent">
+        <!-- header mid area start -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-content">
+                            <div class="tmp-mainmenu-nav d-none d-xl-block">
+                                <nav class="navbar-example2 onepagenav">
+                                    <ul class="tmp-mainmenu nav nav-pills">
+                                        <li class="current"><a class="smoth-animation" href="#home">Home</a></li>
+                                        <li class="nav-item"><a class="smoth-animation" href="#about">About</a></li>
+                                        <li class="nav-item"><a class="smoth-animation" href="#awards">Awards</a></li>
+                                        <li class="nav-item"><a class="smoth-animation" href="#vision">Vision</a></li>
+                                        <li class="nav-item"><a class="smoth-animation" href="#service">Service</a></li>
+                                        <li class="nav-item"><a class="smoth-animation" href="#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="tmp-header-right">
+                                <div class="social-share-wrapper d-none d-xl-block">
+                                    <div class="social-link">
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="tmp-side-collups-area d-block d-xl-none">
+                                    <button class="hamberger-menu humberger_menu_active"><i id="menuBtn" class="fa-light fa-bars humberger-menu"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- header mid area end -->
+        </header>
+
+
+    <!-- Start Popup Mobile Menu  -->
+        <div class="d-block d-xl-none">
+            <div class="tmp-popup-mobile-menu">
+                <div class="inner">
+                    <div class="header-top">
+                        <div class="close-menu">
+                            <button class="close-button tmp-round-action-btn">
+                                <i class="fa-sharp fa-light fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <ul class="tmp-mainmenu onepagenav-click">
+                        <li><a class="smoth-animation" href="#home">Home</a></li>
+                        <li><a class="smoth-animation" href="#about">About</a></li>
+                        <li><a class="smoth-animation" href="#awards">Awards</a></li>
+                        <li><a class="smoth-animation" href="#vision">Vision</a></li>
+                        <li><a class="smoth-animation" href="#service">Service</a></li>
+                        <li><a class="smoth-animation" href="#contact">Contact</a></li>
+                    </ul>
+
+                <!-- social sharea area -->
+                    <div class="social-wrapper mt--40">
+                        <span class="subtitle">find with me</span>
+                        <div class="social-link">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                <!-- end -->
+                </div>
+            </div>
+        </div>
+    <!-- End Popup Mobile Menu  -->
+
+    <!-- tmp banner area start -->
+        <div class="tmp-banner-one-area add-pattern" id="home">
+            <div class="container">
+                <div class="banner-one-main-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="banner-right-content">
+                            {% comment %} <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/banner/banner-user-image-one.png' %}" alt="banner-img"> {% endcomment %}
+                                <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/banner/abin-pic-1.png' %}" alt="banner-img">
+                                <h2 class="banner-big-text-1 up-down">PRINCIPLE&CEO</h2>
+                                <h2 class="banner-big-text-2 up-down-2">PRINCIPLE&CEO</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="inner">
+                                <span class="sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">Hello</span>
+                                <h1 class="title theme-gradient tmp-scroll-trigger tmp-fade-in animation-order-2 mt--5">I’m
+                                    Dr.Abin.C.Raj
+                                </h1>
+                                <h6 class="tagline">
+                                    Principal & CEO | <a href="https://example.com/whrpc" target="_blank" style="text-decoration: none;">
+                                        National VP - WHRPC
+                                    </a> | Ph.D. in Economics | School Strategist & Academic Director | IB, IGCSE, CBSE, ICSE Expert | UNESCO & International Certified Educator | CBSE & IGCSE Curriculum Panelist | Award-Winning Innovator
+                                </h6>
+                                <p class="disc tmp-scroll-trigger tmp-fade-in animation-order-3">
+                                    Dr. Abin C. Raj is a globally recognized edupreneur and visionary leader, redefining the future of education through innovation, inclusion, and academic excellence.
+                                    He is the <span style="color: #007bff; font-weight: bold;">Founder and CEO of "Edspire – Where Education Inspires,"</span> a transformative initiative dedicated to empowering students and educators alike.
+                                    With a mission to uplift communities and enrich learning experiences, he stands as a trailblazer in reshaping education across India and beyond.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- tmp banner area end -->
+
+    <!-- Tpm Service Area Start -->
+        <section class="service-area tmp-section-gap" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="service-card-v1 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1 tmp-link-animation">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="service-title"><a href="service-details.html">55+</a></h4>
+                            <p class="service-para">Educational Projects</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="service-card-v1 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2 tmp-link-animation">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h4 class="service-title"><a href="service-details.html">22+</a></h4>
+                            <p class="service-para">Dedicated Team Members</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="service-card-v1 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3 tmp-link-animation">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <h4 class="service-title"><a href="service-details.html">10K+</a></h4>
+                            <p class="service-para">Students Empowered</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="service-card-v1 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4 tmp-link-animation">
+                            <div class="service-card-icon">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <h4 class="service-title"><a href="service-details.html">15+</a></h4>
+                            <p class="service-para">Prestigious Awards & Honors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Tpm Service Area End -->
+
+    <!-- Tpm Counter Area Start -->
+        <section class="counter-area">
+            <div class="container">
+                <div class="row g-5 animation-action-3">
+                    <div class="col-12 col-lg-6 col-xl-6 col-xxl-6 paralax-image">
+                        <div class="year-of-expariance-wrapper bg-blur-style-one tmp-scroll-trigger tmp-fade-in animation-order-1">
+                            <div class="year-expariance-wrap with-flex">
+                            <!-- <h2 class="year-number"><span class="counter">25 </span> </h2> -->
+                            {% comment %} <h2 class="counter year-number"><span class="odometer" data-count="25">00</span>
+                            </h2> {% endcomment %}
+                                <h3 class="year-title" style="color:var(--color-primary);">The Visionary
+                                    Behind India’s
+                                    Educational
+                                    Renaissance</h3>
+                            </div>
+                            <p class="year-para" style="color: var(--color-gray);">Dr. Abin C. Raj is an award-winning edupreneur, academic leader, and global education reformer who is reshaping the future of learning. With multiple doctorates and international certifications, he brings unmatched expertise in educational leadership, curriculum innovation, and institutional development. From leading schools under global boards to pioneering inclusive education for underprivileged communities, his work bridges academic excellence with real-world impact.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="counter-area-right-content">
+                            <div class="row g-5">
+                                <div class="col-lg-6 col-sm-6 col-12 paralax-image">
+                                    <div class="counter-card tmponhover active single-animation tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                        <h3 class="counter counter-title"><span>USA</span>
+                                        </h3>
+                                        <div class="tmp-light light-left"></div>
+                                        <p class="counter-para" style="line-height: 18px; margin-top: 14px; color: var(--color-gray);">Doctorate in Economics from Maryland State University</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-12 paralax-image">
+                                    <div class="counter-card tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-2">
+                                        <h3 class="counter counter-title"><span>Kerala</span>
+                                        </h3>
+                                        <div class="tmp-light light-left"></div>
+                                        <p class="counter-para" style="line-height: 18px; margin-top: 14px; color: var(--color-gray);">Master’s and Bachelor’s in Economics from the Hishingnes Maharaja’s University College </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-12 paralax-image">
+                                    <div class="counter-card tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-3">
+                                        <h3 class="counter counter-title"><span>UK</span>
+                                        </h3>
+                                        <div class="tmp-light light-left"></div>
+                                        <p class="counter-para" style="line-height: 18px; margin-top: 14px; color: var(--color-gray);">expertise by acquiring a B.Ed, M.Ed, and a Postgraduate Certification in Teaching and Learning </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-12 paralax-image">
+                                    <div class="counter-card tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-4">
+                                        <h3 class="counter counter-title"><span >Delhi</span>
+                                        </h3>
+                                        <div class="tmp-light light-left"></div>
+                                        <p class="counter-para" style="line-height: 18px; margin-top: 14px; color: var(--color-gray);">serves as the National Vice President of the World Human Rights Protection Commission</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Tpm Counter Area End -->
+
+    <!-- Tpm Latest Service Area Start -->
+        <section class="latest-service-area tmp-section-gapTop" id="awards">
+            <div class="container">
+                <div class="section-head mb--50">
+                    <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        <span class="subtitle theme-gradient">Awards & Recognitions</span>
+                    </div>
+                    <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Inspiring The World One
+                        <br> Achievement at a Time
+                    </h2>
+                    <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
+                        Recognized globally for exceptional leadership, innovation in education, and an unwavering commitment to empowering students through visionary practices.
+                    </p>
+                </div>
+
+                <div class="row animation-action-2">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="paralax-image">
+                            <div class="service-card-v2 active single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                <h2 class="service-card-num" style="color:var(--color-primary);"><span>01.</span>Innovative Principal of the Year</h2>
+                                <p class="service-para">Awarded at the World School Summit, Dubai (2025) for visionary leadership and educational innovation.</p>
+                                <div class="tmp-light light-center"></div>
+                            </div>
+                        </div>
+                        <div class="paralax-image">
+                            <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
+                                <h2 class="service-card-num" style="color:var(--color-primary);"><span>02.</span>National Principal of the Year</h2>
+                                <p class="service-para">Recognized across India (2025) for excellence in academic leadership and institutional growth.</p>
+                                <div class="tmp-light light-center"></div>
+                            </div>
+                        </div>
+                        <div class="paralax-image">
+                            <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
+                                <h2 class="service-card-num" style="color:var(--color-primary);"><span>03.</span>Nelson Mandela Excellence Award</h2>
+                                <p class="service-para">Received the Nelson Mandela International Excellence Award in the UK for outstanding educational contributions.</p>
+                                <div class="tmp-light light-center"></div>
+                            </div>
+                        </div>
+                        <div class="paralax-image">
+                            <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-5">
+                                <h2 class="service-card-num" style="color:var(--color-primary);"><span>04.</span>World Record Title Holder</h2>
+                                <p class="service-para">Recognized in the Prestigious Book of World Records for exceptional achievements in education and leadership.</p>
+                                <div class="tmp-light light-center"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 paralax-image order-1 order-lg-2 d-flex align-items-center justify-content-center ">
+                        <div class="service-card-user-image tmponhover single-animation active" style="height: 85%;">
+                            <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" style="border-radius: 14px;" src="{% static 'assets/images/services/abin-pic-4.png' %}" alt="latest-user-image">
+                            <div class="tmp-light light-top-left"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Tpm Latest Service Area End -->
+
+    <!-- Tpm Education Experience Area Start -->
+        <section class="education-experience tmp-section-gapTop" id="vision">
+            <div class="container">
+                <div class="section-head mb--50">
+                    <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        <span class="subtitle theme-gradient">Social Impact & Research</span>
+                    </div>
+                    <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Empowering Society & Transforming Education</h2>
+                    <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
+                        Dr. Abin C. Raj has dedicated his efforts not only to academic excellence but also to uplifting communities and advancing educational research for inclusive learning.
+                    </p>
+                </div>
+
+                <div class="row g-5 animation-action-3">
+                    <div class="col-lg-6 paralax-image col-sm-6">
+                        <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
+                            <h4 class="edu-sub-title" style="color:var(--color-primary);">Chairman – Blood Donation Society</h4>
+                            <h2 class="edu-title">Ongoing</h2>
+                            <div class="tmp-light light-top-left"></div>
+                            <p class="edu-para">Mobilizing youth and communities across regions to ensure a steady supply of safe and voluntary blood donations.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 paralax-image col-sm-6">
+                        <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
+                            <h4 class="edu-sub-title" style="color:var(--color-primary);">COVID-19 Relief Drives</h4>
+                            <h2 class="edu-title">2020-2021</h2>
+                            <div class="tmp-light light-top-left"></div>
+                            <p class="edu-para">Distributed essential kits, books, and food to children and elderly in remote areas during pandemic lockdowns.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 paralax-image col-sm-6">
+                        <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
+                            <h4 class="edu-sub-title" style="color:var(--color-primary);">Tribal Education Initiatives</h4>
+                            <h2 class="edu-title">Maharashtra</h2>
+                            <div class="tmp-light light-top-left"></div>
+                            <p class="edu-para">Launched free educational programs and mobile learning units to support tribal children in remote villages.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 paralax-image col-sm-6">
+                        <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                            <h4 class="edu-sub-title" style="color:var(--color-primary);">Academic Aid for Underprivileged Students</h4>
+                            <h2 class="edu-title">Pan India</h2>
+                            <div class="tmp-light light-top-left"></div>
+                            <p class="edu-para">Provided financial aid, learning materials, and mentorship to help bridge the education gap for disadvantaged students.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experiences-wrapper">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="experiences-wrap-left-content">
+                                <h2 class="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">Research Focus</h2>
+
+                                <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                    <p class="ex-subtitle theme-gradient">Educational Research</p>
+                                    <h2 class="ex-name">Transforming Slow Learners</h2>
+                                    <h3 class="ex-title">Cognitive-Behavioral Approaches</h3>
+                                    <p class="ex-para">
+                                        Dr. Raj’s groundbreaking research focuses on integrating neuroscience with practical classroom strategies to enhance comprehension and long-term retention in slow learners.
+                                    </p>
+                                </div>
+                                <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-2">
+                                    <p class="ex-subtitle theme-gradient">Inclusion & Innovation</p>
+                                    <h2 class="ex-name">Personalized Academic Models</h2>
+                                    <h3 class="ex-title">Inclusive Learning Strategies</h3>
+                                    <p class="ex-para">
+                                        His work aims to create adaptable, inclusive educational models tailored to individual learning needs, promoting equity in academic outcomes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 paralax-image">
+                            <div class="experiences-wrap-right-content">
+                                <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/experiences/abin-pic-3.jpg' %}" alt="expert-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    <!-- Tpm Education Experience Area End -->
+
+    <!-- Tpm Latest Portfolio Area Start -->
+        <div class="latest-portfolio-area custom-column-grid tmp-section-gapTop" id="service">
+            <div class="container">
+                <div class="section-head mb--60">
+                    <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        <span class="subtitle theme-gradient">Services</span>
+                    </div>
+                    <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Transforming Education through
+                        <br> Leadership & Innovation
+                    </h2>
+                    <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">Empowering schools, teachers, students, and parents through strategic planning, training, and mentorship for a holistic educational experience.</p>
+                </div>
+                <div class="row animation-action-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-1" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-chalkboard-teacher fa-3x text-primary" ></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>Academic Director Consult</strong></h5>
+                                    <p class="portfoli-card-para">Strategic academic guidance for institutions.</p>
+                                    <div class="mt-auto">
+                                        <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-2" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-user-plus fa-3x text-success"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>School Admission Strategies</strong></h5>
+                                    <p class="portfoli-card-para">Expert help in boosting enrollment and outreach.</p>
+                                    <div class="mt-auto">
+                                        <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-3" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-cogs fa-3x text-warning"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>School Management Consulting</strong></h5>
+                                    <p class="portfoli-card-para">Optimize school operations, HR, and leadership.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- 4. New School Planning & Setup -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-4" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-school fa-3x text-danger"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>New School Planning & Setup</strong></h5>
+                                    <p class="portfoli-card-para">Support in launching new educational ventures.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- 5. Resource Person / Guest Speaker -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-microphone fa-3x text-info"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>Resource Person / Guest Speaker</strong></h5>
+                                    <p class="portfoli-card-para">Seminars, workshops, and keynote sessions.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- 6. Teacher Training & Motivation -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-6" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-users fa-3x text-secondary"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>Teacher Training & Motivation</strong></h5>
+                                    <p class="portfoli-card-para">Effective pedagogy, classroom management, and morale.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- 7. Parent Counseling -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-7" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-user-friends fa-3x text-dark"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>Parent Counseling</strong></h5>
+                                    <p class="portfoli-card-para">Guidance sessions for modern parenting and child growth.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- 8. Student Counseling -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-8" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-child fa-3x text-success" style="font-size: 7rem;"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>Student Counseling</strong></h5>
+                                    <p class="portfoli-card-para">Study skills, career guidance, and mental well-being.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- 9. School Reputation Management -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-9" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="portfoli-card-img tmponhover single-animation active">
+                                <div class="v2 text-center py-4">
+                                    <i class="fas fa-bullhorn fa-3x text-danger"></i>
+                                </div>
+                                <div class="tmp-light light-left"></div>
+                                <div class="portfolio-card-content-wrap text-center d-flex flex-column">
+                                    <h5 class="portfolio-card-title"><strong>School Reputation Management</strong></h5>
+                                    <p class="portfoli-card-para">Brand building, online presence, and PR.</p>
+                                    <a href="https://wa.me/918590639531" target="__blank" class="btn btn-primary mt-2 mb-2 card-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!-- Tpm Latest Portfolio Area End -->
+
+
+    <!-- Tpm Get In touch start -->
+        <section class="get-in-touch-area tmp-section-gapTop mb-5" id="contact">
+            <div class="container">
+                <div class="contact-get-in-touch-wrap mb-5 pb-5">
+                    <div class="get-in-touch-wrapper position-relative overflow-hidden">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-5">
+                                <div class="section-head text-align-left">
+                                    <div class="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                        <span class="subtitle theme-gradient">GET IN TOUCH</span>
+                                    </div>
+                                    <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Let’s Collaborate for Educational Excellence</h2>
+                                    <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
+                                        Whether you're a school, educator, student, or parent seeking support, guidance, or transformation—I'm here to help. Let’s connect and drive meaningful change in the education ecosystem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="contact-inner">
+                                    <div class="contact-form">
+                                        <div id="form-messages" class="error"></div>
+                                        <form class="tmp-dynamic-form" id="contact-form" method="POST" action="https://inversweb.com/product/html/virtuo/mailer.php">
+                                            <div class="contact-form-wrapper row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input class="input-field" name="name" id="contact-name" placeholder="Your Name" type="text" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input class="input-field" id="contact-phone" placeholder="Phone Number" type="number" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input class="input-field" id="contact-email" name="email" placeholder="Your Email" type="email" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input class="input-field" type="text" id="subject" name="subject" placeholder="Subject">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <textarea class="input-field" placeholder="Your Message" name="message" id="contact-message" required></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="tmp-button-here">
+                                                        <button class="tmp-btn hover-icon-reverse btn-border btn-md tmp-modern-button radius-round download-icon">
+                                                            <span class="icon-reverse-wrapper">
+                                                                <span class="btn-text">Schedule Appointment</span>
+                                                                <span class="btn-hack"></span>
+                                                                <img src="assets/images/button/btg-bg.svg" alt="" class="btn-bg">
+                                                                <img src="assets/images/button/btg-bg-2.svg" alt="" class="btn-bg-hover">
+                                                                <span class="btn-icon"><i class="ffa-sharp fa-regular fa-arrow-right"></i></span>
+                                                                <span class="btn-icon"><i class="ffa-sharp fa-regular fa-arrow-right"></i></span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Tpm Get In touch End -->
+
+    <!-- Start Footer Area  -->
+    <!-- Start Footer Area  -->
+        <footer class="footer-area footer-style-one-wrapper bg-color-footer bg_images tmp-section-gap">
+            <div class="separator-animated-border border-top-footer animated-true"></div>
+            <div class="separator-animated-border animated-true"></div>
+            <div class="container">
+                <div class="footer-main footer-style-one">
+                    <div class="row g-5">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="single-footer-wrapper border-right mr--20">
+                                <p class="description theme-gradient"><span>Dr Abin C Raj</p>
+                                    <p class="para">Dr. Abin C. Raj’s journey is a true inspiration—blending innovation, leadership, and compassion to reshape education. His mission continues to empower students, educators, and institutions across the globe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="copyright-area-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-wrapper">
+                                <p class="copy-right-para tmp-link-animation"> ©<a href="https://digitalroomz.com/" target="_blank">Dr.Abin.C.Raj </a>
+                                    <script>
+                                        document.write(new Date().getFullYear())
+                                    </script> | All Rights Reserved
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- End Footer Area  -->
+    <!-- End Footer Area  -->
+    <!-- Start trigger modal -->
+            <div class="modal fade show" id="exampleModalCenters" tabindex="-1" role="dialog" aria-modal="true">
+                <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- End trigger modal -->
+
+
+
+
+            <div class="intro-video-card-wrapper">
+                <div class="background-overlay"></div>
+            </div>
+
+    <!-- progress area start -->
+            <div class="scrollToTop" style="display: block;">
+                <div class="arrowUp">
+                    <i class="fa-light fa-arrow-up"></i>
+                </div>
+                <div class="water" style="transform: translate(0px, 87%);">
+                    <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                        <use xlink:href="#wave"></use>
+                    </svg>
+                    <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                        <use xlink:href="#wave"></use>
+                    </svg>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 560 20" style="display: none;">
+                        <symbol id="wave">
+                            <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z" fill="#fff"></path>
+                            <path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z" fill="#fff"></path>
+                            <path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z" fill="#fff"></path>
+                            <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z" fill="#fff"></path>
+                        </symbol>
+                    </svg>
+
+                </div>
+            </div>
+    <!-- progress area end -->
+
+
+            <script src="{% static 'assets/js/vendor/modernizer.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/jquery.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/jquery-ui.min.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/waypoints.min.js' %}"></script>
+
+            <script src="{% static 'assets/js/plugins/odometer.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/appear.js' %}"></script>
+
+
+            <script src="{% static 'assets/js/vendor/jquery-one-page-nav.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/tilt.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/swiper.js' %}"></script>
+
+            <script src="{% static 'assets/js/plugins/gsap.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/splittext.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/scrolltigger.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/scrolltoplugins.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/smoothscroll.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/twinmax.js' %}"></script>
+    <!-- bootstrap Js-->
+            <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/waw.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/intro-video.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/isotop.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/animation.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/contact.form.js' %}"></script>
+            <script src="{% static 'assets/js/vendor/backtop.js' %}"></script>
+            <script src="{% static 'assets/js/plugins/text-type.js' %}"></script>
+    <!-- custom Js -->
+            <script src="{% static 'assets/js/main.js' %}"></script>
+        </body>
+
+    </html>
