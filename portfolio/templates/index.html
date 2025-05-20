@@ -716,7 +716,7 @@
                                 <div class="contact-inner">
                                     <div class="contact-form">
                                         <div id="form-messages" class="error"></div>
-                                        <form class="tmp-dynamic-form" id="contact-form" method="POST" action="{% url 'contact' %}">
+                                        <form id="contact-form" method="POST" action="{% url 'contact' %}">
                                             {% csrf_token %}
                                             <div class="contact-form-wrapper row">
                                                 <div class="col-lg-6">
@@ -751,7 +751,7 @@
 
                                                 <div class="col-lg-12">
                                                     <div class="tmp-button-here">
-                                                        <button class="tmp-btn hover-icon-reverse btn-border btn-md tmp-modern-button radius-round download-icon">
+                                                        <button class="tmp-btn hover-icon-reverse btn-border btn-md tmp-modern-button radius-round download-icon" type=submit>
                                                             <span class="icon-reverse-wrapper">
                                                                 <span class="btn-text">Schedule Appointment</span>
                                                                 <span class="btn-hack"></span>
@@ -765,6 +765,7 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -826,10 +827,6 @@
                 </div>
             </div>
     <!-- End trigger modal -->
-
-
-
-
             <div class="intro-video-card-wrapper">
                 <div class="background-overlay"></div>
             </div>
@@ -885,7 +882,7 @@
             <script src="{% static 'assets/js/vendor/intro-video.js' %}"></script>
             <script src="{% static 'assets/js/plugins/isotop.js' %}"></script>
             <script src="{% static 'assets/js/plugins/animation.js' %}"></script>
-            <script src="{% static 'assets/js/plugins/contact.form.js' %}"></script>
+            {% comment %} <script src="{% static 'assets/js/plugins/contact.form.js' %}"></script> {% endcomment %}
             <script src="{% static 'assets/js/vendor/backtop.js' %}"></script>
             <script src="{% static 'assets/js/plugins/text-type.js' %}"></script>
     <!-- custom Js -->
