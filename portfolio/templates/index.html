@@ -716,7 +716,8 @@
                                 <div class="contact-inner">
                                     <div class="contact-form">
                                         <div id="form-messages" class="error"></div>
-                                        <form class="tmp-dynamic-form" id="contact-form" method="POST" action="https://inversweb.com/product/html/virtuo/mailer.php">
+                                        <form class="tmp-dynamic-form" id="contact-form" method="POST" action="{% url 'contact' %}">
+                                            {% csrf_token %}
                                             <div class="contact-form-wrapper row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
@@ -726,7 +727,7 @@
 
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <input class="input-field" id="contact-phone" placeholder="Phone Number" type="number" required>
+                                                        <input class="input-field" name="phone_number" id="contact-phone" placeholder="Phone Number" type="text" required>
                                                     </div>
                                                 </div>
 
@@ -754,8 +755,8 @@
                                                             <span class="icon-reverse-wrapper">
                                                                 <span class="btn-text">Schedule Appointment</span>
                                                                 <span class="btn-hack"></span>
-                                                                <img src="assets/images/button/btg-bg.svg" alt="" class="btn-bg">
-                                                                <img src="assets/images/button/btg-bg-2.svg" alt="" class="btn-bg-hover">
+                                                                <img src="{% static 'assets/images/button/btg-bg.svg' %}" alt="" class="btn-bg">
+                                                                <img src="{% static 'assets/images/button/btg-bg-2.svg' %}" alt="" class="btn-bg-hover">
                                                                 <span class="btn-icon"><i class="ffa-sharp fa-regular fa-arrow-right"></i></span>
                                                                 <span class="btn-icon"><i class="ffa-sharp fa-regular fa-arrow-right"></i></span>
                                                             </span>
